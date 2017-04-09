@@ -14,12 +14,12 @@ public class MathematicOperationTests {
     
     @Test
     public void _6_plus_minus20_isMinus14() {
-         assertEquals("Spatne pocita.", -14, MathLib.plus(6, -20), 0.001);
+         assertEquals("Spatne pocita.", -14, MathLib.addition(6, -20), 0.001);
     }
     
     @Test
     public void _minus6_minus_minus20_14() {
-         assertEquals("Spatne pocita.", 14, MathLib.minus(-6, -20), 0.001);
+         assertEquals("Spatne pocita.", 14, MathLib.subtraction(-6, -20), 0.001);
     }
     
     @Test
@@ -34,17 +34,17 @@ public class MathematicOperationTests {
     
     @Test
     public void _60_div_minus30_isMinus2() {
-         assertEquals("Spatne pocita.", -2, MathLib.divident(60, -30), 0.001);
+         assertEquals("Spatne pocita.", -2, MathLib.division(60, -30), 0.001);
     }
     
     @Test
     public void _60_div_2dot2_is27() {
-         assertEquals("Spatne pocita.", 27.27272727, MathLib.divident(60, 2.2), 0.001);
+         assertEquals("Spatne pocita.", 27.27272727, MathLib.division(60, 2.2), 0.001);
     }
     
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void _100_div_0_ExceptionExpected() {
-         MathLib.divident(100, 0);
+         MathLib.division(100, 0);
     }
     
     @Test
@@ -64,7 +64,7 @@ public class MathematicOperationTests {
     
     @Test
     public void factorial_100_isRealyBigNumber() {
-         assertEquals("Spatne pocita.", 9.332621544e157, MathLib.factorial(100), 1);
+         assertEquals("Spatne pocita.", 9.332621544394418E157, MathLib.factorial(100), 1);
     }
     
     @Test
