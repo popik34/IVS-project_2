@@ -13,6 +13,41 @@ import org.junit.Test;
 public class MathematicOperationTests {
     
     @Test
+    public void _6_plus_minus20_isMinus14() {
+         assertEquals("Spatne pocita.", -14, MathLib.plus(6, -20), 0.001);
+    }
+    
+    @Test
+    public void _minus6_minus_minus20_14() {
+         assertEquals("Spatne pocita.", 14, MathLib.minus(-6, -20), 0.001);
+    }
+    
+    @Test
+    public void _minus6_multiplication_minus5_isMinus30() {
+         assertEquals("Spatne pocita.", 30, MathLib.multiplication(-6, -5), 0.001);
+    }
+    
+    @Test
+    public void _17_multiplication_0_is0() {
+         assertEquals("Spatne pocita.", 0, MathLib.multiplication(17, 0), 0.001);
+    }
+    
+    @Test
+    public void _60_div_minus30_isMinus2() {
+         assertEquals("Spatne pocita.", -2, MathLib.divident(60, -30), 0.001);
+    }
+    
+    @Test
+    public void _60_div_2dot2_is27() {
+         assertEquals("Spatne pocita.", 27.27272727, MathLib.divident(60, 2.2), 0.001);
+    }
+    
+    @Test(expected = ArithmeticException.class)
+    public void _100_div_0_ExceptionExpected() {
+         MathLib.divident(100, 0);
+    }
+    
+    @Test
     public void factorial_5_is120() {
          assertEquals("Spatne pocita.", 120, MathLib.factorial(5), 1);
     }

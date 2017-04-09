@@ -6,6 +6,26 @@ package MathLibrary;
  */
 public class MathLib {
     
+    public static double plus(double operand1, double operand2){
+        return 0;
+    }
+    
+    public static double minus(double operand1, double operand2){
+        return 0;
+    }
+    
+    public static double multiplication(double operand1, double operand2){
+        return 0;
+    }
+    
+    public static double divident(double operand1, double operand2) throws ArithmeticException{
+        if (operand2 == 0) {
+            throw new ArithmeticException("Divide by zero error");
+        }
+        return 0;
+    }
+    
+            
     public static double factorial(long number) throws IllegalArgumentException {
 		if (number < 0){
 			throw new IllegalArgumentException();
