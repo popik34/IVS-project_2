@@ -103,8 +103,8 @@ public class MathematicOperationTests {
     }
     
     @Test
-    public void _3_rootOf_minus216_isMinus6() {
-         assertEquals("Spatne pocita.", -6, MathLib.root(-216, 3), 0.01);
+    public void _3_rootOf_216_is6() {
+         assertEquals("Spatne pocita.", 6, MathLib.root(216, 3), 0.01);
     }
     
     @Test
