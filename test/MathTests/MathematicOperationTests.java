@@ -42,7 +42,7 @@ public class MathematicOperationTests {
          assertEquals("Spatne pocita.", 27.27272727, MathLib.division(60, 2.2), 0.001);
     }
     
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void _100_div_0_ExceptionExpected() {
          MathLib.division(100, 0);
     }
@@ -64,7 +64,7 @@ public class MathematicOperationTests {
     
     @Test
     public void factorial_100_isRealyBigNumber() {
-         assertEquals("Spatne pocita.", 9.332621544e157, MathLib.factorial(100), 1);
+         assertEquals("Spatne pocita.", 9.332621544394418E157, MathLib.factorial(100), 1);
     }
     
     @Test
