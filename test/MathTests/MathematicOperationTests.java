@@ -76,12 +76,7 @@ public class MathematicOperationTests {
     public void _minus9_pow_3_isMinus729() {
          assertEquals("Spatne pocita.", -729, MathLib.pow(-9, 3), 0.01);
     }
-    
-    @Test
-    public void _10_pow_minus5_is0dot00001() {
-         assertEquals("Spatne pocita.", 0.00001, MathLib.pow(10, -5), 0.01);
-    }
-    
+        
     @Test
     public void _99_pow_9999_expectedInf() {
          assertTrue("hodnota by mela byt tak velka,ze se nevleze do double.", Double.isInfinite(MathLib.pow(99, 9999)));
@@ -89,27 +84,27 @@ public class MathematicOperationTests {
     
     @Test
     public void _5_rootOf_59049_is9() {
-         assertEquals("Spatne pocita.", 9, MathLib.pow(59049, 5), 0.01);
+         assertEquals("Spatne pocita.", 9, MathLib.root(59049, 5), 0.01);
     }
     
     @Test
     public void _2_rootOf_50_is7dot07() {
-         assertEquals("Spatne pocita.", 7.071, MathLib.pow(50, 2), 0.01);
+         assertEquals("Spatne pocita.", 7.071, MathLib.root(50, 2), 0.01);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void _2_rootOf_minus50_ExceptionExpected() {
-        MathLib.pow(-50, 2);
+        MathLib.root(-50, 2);
     }
     
     @Test
     public void _2_rootOf_25dot1_is5dot0099() {
-         assertEquals("Spatne pocita.", 5.0099, MathLib.pow(25.1, 2), 0.01);
+         assertEquals("Spatne pocita.", 5.0099, MathLib.root(25.1, 2), 0.01);
     }
     
     @Test
     public void _3_rootOf_minus216_isMinus6() {
-         assertEquals("Spatne pocita.", -6, MathLib.pow(-216, 3), 0.01);
+         assertEquals("Spatne pocita.", -6, MathLib.root(-216, 3), 0.01);
     }
     
     @Test
