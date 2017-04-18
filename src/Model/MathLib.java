@@ -169,5 +169,12 @@ public class MathLib {
 			return number * -1;
 		}        
     }
-    
+
+	public static double reciprocal(double number){
+		return division(1, number);
+	}
+
+	public static double logarithm(double number) {
+		return Math.log(number);
+	}
 }
