@@ -142,6 +142,10 @@ public class Controller implements ActionListener {
             switch (this.action)
             {
                 case "pow":
+                    //test zdali je v doublu cele cislo
+                    if((secondParam - secondParam.intValue()) != 0){
+                        return exceptionMessageSet("Invalid entry");
+                    }
                     result = MathLib.pow(this.firstParam, this.secondParam.intValue());
                     break;
 
@@ -150,6 +154,10 @@ public class Controller implements ActionListener {
                     break;
 
                 case "factorial":
+                    //test zdali je v doublu cele cislo
+                    if((firstParam - firstParam.intValue()) != 0){
+                        return exceptionMessageSet("Invalid entry");
+                    }
                     result = MathLib.factorial(this.firstParam.intValue());
                     break;
 
