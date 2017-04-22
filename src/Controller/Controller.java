@@ -138,46 +138,63 @@ public class Controller implements ActionListener {
 
         Double result = null;
 
-        switch (this.action)
-        {
-            case "pow":
-                result = MathLib.pow(this.firstParam, this.secondParam.intValue());
-                break;
+        try{
+            switch (this.action)
+            {
+                case "pow":
+                    result = MathLib.pow(this.firstParam, this.secondParam.intValue());
+                    break;
 
-            case "root":
-                result = MathLib.root(this.firstParam, this.secondParam);
-                break;
+                case "root":
+                    result = MathLib.root(this.firstParam, this.secondParam);
+                    break;
 
-            case "factorial":
-                result = MathLib.factorial(this.firstParam.intValue());
-                break;
+                case "factorial":
+                    result = MathLib.factorial(this.firstParam.intValue());
+                    break;
 
-            case "division":
-                result = MathLib.division(this.firstParam, this.secondParam);
-                break;
+                case "division":
+                    result = MathLib.division(this.firstParam, this.secondParam);
+                    break;
 
-            case "multiplication":
-                result = MathLib.multiplication(this.firstParam, this.secondParam);
-                break;
+                case "multiplication":
+                    result = MathLib.multiplication(this.firstParam, this.secondParam);
+                    break;
 
-            case "addition":
-                result = MathLib.addition(this.firstParam, this.secondParam);
-                break;
+                case "addition":
+                    result = MathLib.addition(this.firstParam, this.secondParam);
+                    break;
 
-            case "subtraction":
-                result = MathLib.subtraction(this.firstParam, this.secondParam);
-                break;
+                case "subtraction":
+                    result = MathLib.subtraction(this.firstParam, this.secondParam);
+                    break;
 
-            case "logarithm":
-                result = MathLib.logarithm(this.firstParam);
-                break;
+                case "logarithm":
+                    result = MathLib.logarithm(this.firstParam);
+                    break;
 
-            case "reciprocal":
-                result = MathLib.reciprocal(this.firstParam);
-                break;
+                case "reciprocal":
+                    result = MathLib.reciprocal(this.firstParam);
+                    break;
+            }
+        }catch (IllegalArgumentException e){
+            return exceptionMessageSet("Invalid entry");
+        }catch (Exception e){
+            return exceptionMessageSet("Unknown error");
         }
 
         return result;
+    }
+    
+    /**
+     * Vypíše chybovou hlášku
+     * @param message chybová hláška
+     * @return vrací null, ktere se pouziva v result pro indikaci, ze doslo k chybe
+     */
+    private Double exceptionMessageSet(String message){
+        setTextToStatementField(message);
+        cleanUp(null);
+        return null;
     }
 
     /**
