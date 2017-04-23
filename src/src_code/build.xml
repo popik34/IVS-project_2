@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="IVS-project_2" default="compile" basedir=".">
+	<description>		
+		IJA: testovaci trida pro ukol 3
+	</description>
+
+	<property name="build" location="build"/>
+	<property name="src" location="src_code"/>
+	<property name="dst" location="dest"/>
+	<property name="lib" location="lib"/>
+
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${dst}"/>
+    </target>
+
+    <target name="compile" depends="clean" description="compile">
+    	<mkdir dir="${build}"/>
+    	<javac srcdir="${src}"
+    		   destdir="${build}"
+    		   encoding="utf-8">
+        </javac>
+    	
+    	<mkdir dir="${dst}"/>
+    	
+    	<jar destfile="${dst}/ivs_calculator.jar" basedir="${build}">
+    		<manifest>
+                <attribute name="Main-Class" value="main"/>
+    		</manifest>
+    	</jar>
+    </target>
+
+    <target name="run">
+        <java jar="${dst}/ivs_calculator.jar"
+        	  dir="${dst}"
+        	  fork="true"/>
+    </target>
+
+    <target name="run_tests">
+    	
+    </target>
+
+</project>
