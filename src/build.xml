@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="IVS-project_2" default="compile" basedir=".">
+	<description>		
+		IVS calculator
+	</description>
+
+	<property name="build" location="build"/>
+	<property name="src" location="src"/>
+    <property name="test" location="test"/>
+	<property name="dst" location="dest"/>
+	<property name="lib" location="lib"/>
+
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${dst}"/>
+    </target>
+
+    <target name="compile" depends="clean" description="compile">
+    	<mkdir dir="${build}"/>
+    	<javac srcdir="${src}"
+    		   destdir="${build}"
+    		   encoding="utf-8">
+            <compilerarg value="-cp"/>
+            <compilerarg value="${lib}/junit-4.12.jar:"/>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <mkdir dir="${dst}"/>
+        
+        <jar destfile="${dst}/ivs_calculator.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="Main"/>
+            </manifest>
+        </jar>
+
+        <java jar="${dst}/ivs_calculator.jar"
+              dir="${dst}"
+              fork="true"/>
+    </target>
+
+    <target name="runTest" depends="compile">
+        <junit  printsummary="yes"
+                fork="yes">
+            <classpath location="${lib}/junit-4.12.jar"/>
+            <classpath location="${lib}/hamcrest-core-1.3.jar"/>
+            <classpath location="${build}"/>
+            <test name="MathTests.MathematicOperationTests"/>
+            <formatter type="plain" usefile="false" />
+        </junit>
+    </target>
+
+</project>

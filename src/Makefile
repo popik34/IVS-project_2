@@ -1,5 +1,6 @@
+.PHONY: clean, test
 all:
-	cd src_code && ant compile
+	ant compile
 
 pack: doc repo
 	zip -r xpospi87_xsalve02_xsamek06 doc repo
@@ -7,15 +8,17 @@ pack: doc repo
 	rm -rf repo
 
 clean:
-	cd src_code && ant clean
+	ant clean
+	rm -rf doc
 
 test:
-	cd src_code && ant run_tests
+	ant runTest
+
 doc:
 	mkdir doc
 	
 run:
-	cd src_code && ant run
+	ant run
 
 repo:
 	mkdir repo
