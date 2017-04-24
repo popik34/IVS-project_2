@@ -2,10 +2,11 @@
 all:
 	ant compile
 
-pack: doc repo
-	zip -r xpospi87_xsalve02_xsamek06 doc repo
+pack: doc repo install
+	zip -r xpospi87_xsalve02_xsamek06 doc repo install 
 	rm -rf doc
 	rm -rf repo
+	rm -rf install
 
 clean:
 	ant clean
@@ -24,3 +25,7 @@ run:
 repo:
 	mkdir repo
 	cd repo && git clone https://github.com/popik34/IVS-project_2.git .
+
+install:
+	mkdir install
+	cp setup.exe install
