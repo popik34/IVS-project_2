@@ -1,3 +1,10 @@
+/****************************************************************************************
+ * Název projektu: IVS-project_2
+ * Balíček: MathTests
+ * Soubor: MathematicOperationTests.java
+ * Autor: xpospi87, xsamek06, xsalve06
+ * Popis: Třída pro testování matematické knihovny
+ ****************************************************************************************/
 package MathTests;
 
 import Model.MathLib;
@@ -6,10 +13,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
-/**
- *
- * @author lukas
- */
 public class MathematicOperationTests {
     
     @Test

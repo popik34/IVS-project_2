@@ -1,0 +1,13 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+
+[Makefile, build.xml]
+indent_style = tab
+
+[*.java]
+indent_style = space
+indent_size = 4

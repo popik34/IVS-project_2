@@ -1,3 +1,16 @@
+/****************************************************************************************
+ * Název projektu: IVS-project_2
+ * Balíček: View
+ * Soubor: SwingGui.java
+ * Autor: xpospi87, xsamek06, xsalve06
+ * Popis: Grafické rozhraní
+ ****************************************************************************************/
+
+/**
+ * @file SwingGui.java
+ * @author xpospi87, xsamek06, xsalve02
+ * @brief Grafické rozhraní 
+ */
 package View;
 
 import javax.swing.*;
@@ -6,7 +19,7 @@ import java.util.ArrayList;
 
 /**
  * Třída představující View, všechno co uživatel vidí je zde
- * @author Ondra
+ * @brief Grafické rozhraní
  */
 public class SwingGui {
     private JFrame mainFrame;

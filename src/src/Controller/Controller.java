@@ -1,3 +1,19 @@
+/****************************************************************************************
+ * Název projektu: IVS-project_2
+ * Balíček: Controller
+ * Soubor: Controller.java
+ * Autor: xpospi87, xsamek06, xsalve06
+ * Popis: Třída představující Controller, propojuje Model a View
+ *        Reaguje na události vyvolané ve View a provede danou akci v Modelu
+ ****************************************************************************************/
+
+/**
+ * @file Controller.java
+ *
+ * @author xpospi87, xsamek06, xsalve02
+ * @brief Třída představující Controller, propojuje Model a View
+ */
+
 package Controller;
 
 import Model.MathLib;
@@ -11,7 +27,7 @@ import java.util.ArrayList;
 /**
  * Třída představující Controller, propojuje Model a View
  * Reaguje na události vyvolané ve View a provede danou akci v Modelu
- * @author Ondra
+ * @brief Reaguje na události vyvolané ve View a provede danou akci v Modelu
  */
 public class Controller implements ActionListener {
     private SwingGui view;

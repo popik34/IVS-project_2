@@ -6,7 +6,6 @@
 
 	<property name="build" location="build"/>
 	<property name="src" location="src"/>
-    <property name="test" location="test"/>
 	<property name="dst" location="dest"/>
 	<property name="lib" location="lib"/>
 
