@@ -1,0 +1,3 @@
+xpospi87 100 (GUI)
+xsalve02 100 (testy, instalátor)
+xsamek06 100 (knihovna, Makefile, dokumentace)
