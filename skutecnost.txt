@@ -1,0 +1,1 @@
+Prvotním návrhem bylo implementovat pouze potřebné funkce. Po vytvoření mockupu jsme přidali funkce navíc, tak aby se nám zarovnal počet tlačítek. V mockupu jsme zapomněli na funkci násobení, kterou jsme doplnili a je v tomto ohledu rozdílná oproti mockupu.
