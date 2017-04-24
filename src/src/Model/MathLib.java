@@ -1,8 +1,23 @@
+/****************************************************************************************
+ * Název projektu: IVS-project_2
+ * Balíček: Model
+ * Soubor: MathLib.java
+ * Autor: xpospi87, xsamek06, xsalve06
+ * Popis: Matematická knihovna
+ ****************************************************************************************/
+
+/**
+ * @file MathLib.java
+ * @author xpospi87, xsamek06, xsalve02
+ * @brief Matematická knihovna 
+ */
 package Model;
 
 /**
+ * Třída představující matematickou knihovnu
+ *		Pro některé pokročilé funkce využívá třída java knihovnu Math
  *
- * @author Lukáš Salvet, Jan Samek
+ * @brief Matematická knihovna
  */
 public class MathLib {
     
@@ -170,10 +185,20 @@ public class MathLib {
 		}        
     }
 
+    /**
+	 * Převrácená hodnota
+	 * @param number
+	 * @return převrácená hodnota čísla number 
+     */
 	public static double reciprocal(double number){
 		return division(1, number);
 	}
 
+	/**
+	 * Dekadický logaritmus čísla
+	 * @param number číslo logaritmu
+	 * @return dekadický logaritmus čísla number
+	 */
 	public static double logarithm(double number) {
 		return Math.log(number);
 	}

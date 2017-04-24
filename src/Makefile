@@ -1,4 +1,4 @@
-.PHONY: clean, test
+.PHONY: clean, test, doc
 all:
 	ant compile
 
@@ -14,9 +14,10 @@ clean:
 test:
 	ant runTest
 
-doc:
+doc: clean
 	mkdir doc
-	
+	doxygen
+
 run:
 	ant run
 
