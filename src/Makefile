@@ -3,10 +3,10 @@ all:
 	ant compile
 
 pack: doc repo install
-	zip -r xpospi87_xsalve02_xsamek06 doc repo install 
-	rm -rf doc
-	rm -rf repo
-	rm -rf install
+	mkdir xpospi87_xsalve02_xsamek06
+	mv doc repo install xpospi87_xsalve02_xsamek06 
+	zip -r xpospi87_xsalve02_xsamek06 xpospi87_xsalve02_xsamek06 
+	rm -rf xpospi87_xsalve02_xsamek06
 
 clean:
 	ant clean
