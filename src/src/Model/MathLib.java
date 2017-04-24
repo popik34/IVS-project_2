@@ -15,7 +15,7 @@ package Model;
 
 /**
  * Třída představující matematickou knihovnu
- *        Pro některé pokročilé funkce využívá třída java knihovnu Math
+ *  Pro některé pokročilé funkce využívá třída java knihovnu Math
  *
  * @brief Matematická knihovna
  */
